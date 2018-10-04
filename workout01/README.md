@@ -6,7 +6,7 @@ The workout has four main files:
 
 #### data/
 - nba2018.csv -- the data that I will be working on
-- nba2018-dictionary.md -- an md file that describe details about the content of  nba2018.csv file.
+- nba2018-dictionary.md -- an md file that describes details about the content of  nba2018.csv file.
 #### code/
 #### output/
 ##### report/

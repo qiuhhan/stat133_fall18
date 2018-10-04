@@ -13,7 +13,7 @@ Private Repository for HW assignments of Stat 133 (Fall 2018)
 ## Assignments
 
 - [Demo](demo)
-- [Workout 1](workout1)
+- [Workout 1](https://github.com/stat133-f18/hw-stat133-qiuhhan/tree/master/workout01)
 - Workout 2
 - Workout 3
 

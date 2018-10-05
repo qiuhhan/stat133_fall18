@@ -3,7 +3,10 @@
 #   This script performs cleaning tasks and transformations on 
 #   various columns of 'nba2018.csv'.
 #Input(s): 'nba2018.csv'
-#Output(s): what are the outputs created when running the script?
+#Output(s): 'efficiency-summary.txt', 
+#           'teams-summary.txt', 
+#           'nba2018-teams.csv'.
+
 
   
   
@@ -31,6 +34,7 @@ nba2018$position[nba2018$position == 'PG'] <- 'point_guard'
 nba2018$position[nba2018$position == 'SF'] <- 'small_fwd'
 nba2018$position[nba2018$position == 'SG'] <- 'shoot_guard'
 
+
 library(dplyr)
 #missed_fg = missed field goals
 nba2018 <- mutate(nba2018, missed_fg = nba2018$field_goals_atts - nba2018$field_goals )
@@ -43,20 +47,15 @@ nba2018 <- mutate(nba2018, efficiency = ((nba2018$points + nba2018$rebounds + nb
                                             nba2018$steals + nba2018$blocks - nba2018$missed_fg - 
                                             nba2018$missed_ft - nba2018$turnovers) / nba2018$games)) 
 
-
+#Adding new variables
 sink(file = '../output/efficiency-summary.txt')
 summary(nba2018$efficiency)
 sink()
 
 
 
-
-
-
-
-
+#Creating nba2018-teams.csv
 teams = data.frame(summarise(group_by(nba2018, team), experience = round(sum(experience),2), salary = round(sum(salary),2), points3 = round(sum(points3),2), points2 = round(sum(points2),2), points1 = round(sum(points1),2), off_rebounds = round(sum(off_rebounds),2), def_rebounds = round(sum(off_rebounds),2), assists = round(sum(assists),2), steals = round(sum(steals),2), blocks = round(sum(blocks),2), turnovers = round(sum(turnovers),2), fouls = round(sum(fouls),2), efficiency = round(sum(efficiency),2)))
-
 
 sink(file = '../data/teams-summary.txt')
 summary(teams)

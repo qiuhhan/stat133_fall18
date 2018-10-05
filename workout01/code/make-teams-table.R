@@ -61,6 +61,7 @@ teams = data.frame(summarise(group_by(nba2018, team),
                              points3 = round(sum(points3),2), 
                              points2 = round(sum(points2),2), 
                              points1 = round(sum(points1),2), 
+                             points = round(sum(points),2),
                              off_rebounds = round(sum(off_rebounds),2), 
                              def_rebounds = round(sum(off_rebounds),2), 
                              assists = round(sum(assists),2), 
@@ -74,6 +75,6 @@ sink(file = '../data/teams-summary.txt')
 summary(teams)
 sink()
 
-write.csv(teams, file = '../data/nba2018-teams.csv')
+write.csv(teams, file = '../data/nba2018-teams.csv', row.names = FALSE)
 
 

@@ -1,6 +1,8 @@
 ## Data Dictionary
 
-nba2018.csv records various information of all the NBA players in the 2018 season and is composed of 38 columns and 478 rows -- each column has a characteristic and each row has a name of a player. The csv file contains players' numbers, DOB, experience and game specs, etc. 'postion', 'team', and 'country' are recorded using abbreviations. 'height' is measuring in feet-inches and 'weight' is in pounds. Missing values are either left blank or indicated by 'NA'. A more detailed information is provided below: 
+**nba2018.csv records various information of all the NBA players in the 2018 season and is composed of 38 columns and 478 rows -- each column has one attribute and each row has a name of the players. The csv file contains players' numbers, DOB, experience and game specs, etc. 'postion', 'team', and 'country' are recorded using abbreviations. 'height' is measuring in feet-inches and 'weight' is in pounds. Missing values are either left blank or indicated by 'NA'.**
+
+A more detailed information is provided below: 
 
 • player: first and last names of player 
 

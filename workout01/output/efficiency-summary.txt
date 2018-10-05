@@ -1,0 +1,8 @@
+
+> summary(nba2018$efficiency)
+   Min. 1st Qu.  Median 
+-0.6667  5.0000  8.3472 
+   Mean 3rd Qu.    Max. 
+ 9.5788 12.6066 33.8272 
+
+> sink()

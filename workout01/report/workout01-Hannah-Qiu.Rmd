@@ -96,7 +96,7 @@ by_eff + xlab("Team") + ylab("Eff (points)") + labs(title = "NBA Teams ranked by
 ### Comments and Reflections
 
 - Was this your first time working on a project with such file structure? If yes, how do you feel about it? \
-Yes. It took me some time to figure out how the git and Github work with each other. But other than that, everything was not that time-consuming.\
+Yes. It took me some time to figure out how the git and Github work with each other. But other than that, everything was not that time-consuming. \
 
 - Was this your first time using relative paths? If yes, can you tell why they are important for reproducibility purposes? \
 No. In previous assignments, I've used relative paths. \

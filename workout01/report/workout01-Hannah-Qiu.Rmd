@@ -1,15 +1,16 @@
-================================================================ \
-title: "workout01-Hannah-Qiu" \
-author: "Hannah Qiu" \
-date: "10/4/2018" \
-output: github_document \
-================================================================ \
 
+---
+title: "workout01-Hannah-Qiu"
+author: "Hannah Qiu"
+date: "10/4/2018"
+output: github_document
+---
 
 ### Ranking of Teams
 
 
 ```{r}
+knitr::opts_chunk$set(echo = TRUE, fig.path = "../report/")
 library(ggplot2)
 library(readr)
 ```

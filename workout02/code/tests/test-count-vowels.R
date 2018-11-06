@@ -1,4 +1,4 @@
-library(testthat)
+library('testthat')
 
 context("Tests for count vowels")
 

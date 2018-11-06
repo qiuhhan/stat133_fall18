@@ -1,3 +1,4 @@
+library('testthat')
 context("Test for is-hex-color")
 
 test_that("is_hex() works as expected", {

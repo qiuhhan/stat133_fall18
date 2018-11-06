@@ -1,3 +1,4 @@
+library('testthat')
 context("Test for reverse_chars")
 test_that("reverse_chars() works as expected", { 
   pets <- "step on no pets"

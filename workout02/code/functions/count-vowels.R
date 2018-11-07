@@ -3,7 +3,7 @@
 #' and upper case letters of a character string
 #' @param x a string
 #' @return numbers of vowels
-library(stringr)
+library('stringr')
 
 count_vowels = function(x) {
   if ((typeof(x) != "character") & (length(x) == 1)) {

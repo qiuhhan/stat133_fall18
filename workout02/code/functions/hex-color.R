@@ -4,7 +4,7 @@
 #' @param hex a string
 #' @return TRUE or FALSE
 
-library(stringr)
+library('stringr')
 
 is_hex = function(hex) {
   num = nchar(hex)

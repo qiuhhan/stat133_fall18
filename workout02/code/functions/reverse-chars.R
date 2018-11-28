@@ -3,7 +3,7 @@
 #' @param x unreversed
 #' @return reversed
 
-library(stringr)
+library('stringr')
 
 reverse_chars = function(x) {
   num = nchar(x)

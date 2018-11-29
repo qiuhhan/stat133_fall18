@@ -1,7 +1,7 @@
 #' @rdname roll
 #' @param x an object "roll"
 #' @param further arguments ignored
-summary.roll <- function(x, ...) {
+summary.rolls <- function(x, ...) {
   freqs <- table(x$rolls)
   relative_freqs <- prop.table(freqs)
   roll_freqs <- as.data.frame(cbind(

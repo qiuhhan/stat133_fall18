@@ -1,3 +1,5 @@
+library(testthat)
+
 context("Check device arguments")
 
 test_that("check_sides with ok vectors", {

@@ -1,0 +1,63 @@
+---
+title: "Getting Started with roller"
+author: "Hannah Qiu"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to roller}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library("roller")
+```
+
+##Introduction
+R package "roller" is a minimal package that contains two main functions -- 
+"device" and "roll". 
+
+##Device function
+In the function "device", users can input two variables, "sides" and "prob", 
+second of which is the probabilty of each side of the device. For instance, 
+a device with inputs sides = c("heads", "tails") and prob = c(1/2, 1/2) 
+simulates a coin. Along with the device function, there's a series of auxilary 
+funcitons that check whether the inputs are of the same length, whether the 
+probabilities in the prob vector add up to 1, etc. The output is an object of 
+class "device".
+
+```{r}
+# Let's simulate a fair coin!
+fair_coin <- device(sides = c("top", "bottom"), prob = c(0.5, 0.5))
+fair_coin
+```
+```{r}
+# Now, we want to create a device that has 4 facets named 'a', 'b', 'c', and 'd' with probabilities 0.2, 0.7, 0.05, 0.05
+weird_device <- device(sides = c('a', 'b', 'c', 'd'), prob = c(0.2, 0.7, 0.05, 0.05))
+weird_device
+```
+
+##Roll function
+After having created a "device", there's another function "roll", which allows 
+the users to roll/toss/flip the device for the number of times they desire. The 
+output is an object that's of class "rolls". 
+
+```{r}
+#Let's now try to toss 'fair_coin' 17 times using roll().
+coin_17 <- roll(fair_coin, 17)
+coin_17
+```
+There're several auxilary methods attached to roll(). One of them is summary.rolls(),
+which returns a table of frequencies of each side of the device.
+
+```{r}
+summary.rolls(coin_17)
+```
+If users would like to look at the frequencies graphically, plot.rolls() function will return a vertical barchart of the frequencies based on the given roll function.
+```{r}
+plot.rolls(coin_17)
+```

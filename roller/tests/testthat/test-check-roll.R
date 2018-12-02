@@ -34,3 +34,12 @@ test_that("roll with device and time", {
   expect_error(roll(device(c("a"), 100)))
   expect_true(class(roll(device(), 7)) == "roll")
 })
+
+
+test_that("roll with device and time", {
+  expect_error(summary.rolls(device(c("a"), 1)))
+  expect_equal(class(summary.rolls(device(c("a","b"), c(0.4, 0.6)))), "summary.rolls")
+  expect_type(summary.rolls(device(c("a","b"), c(0.4, 0.6))), "list")
+})
+
+
